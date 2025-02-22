@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --color-deep-blue: 55 90 127;
+  --color-beige: 220 198 160;
+  --color-dark: 17 17 17;
+}
+
+@layer base {
+  html,
+  body {
+    background: linear-gradient(to bottom, #375A7F 15%, #dcc6a0 85%);
+    min-height: 100vh;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.bg-overlay {
+  background: url("/path-to-your-image.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.1;
+  mix-blend-mode: soft-light;
+}
+
+.bg-paint-effect {
+  background: linear-gradient(to bottom, #375A7F, #dcc6a0);
+  filter: contrast(110%) saturate(120%) blur(2px);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tracking-custom {
+  letter-spacing: 0.12em;
+}

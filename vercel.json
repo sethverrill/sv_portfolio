@@ -1,3 +1,7 @@
 {
-  "outputDirectory": "dist"
+  "build": {
+    "env": {
+      "YARN_VERSION": "1.22.22"
+    }
+  }
 }

@@ -14,7 +14,7 @@ const App = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-blend-soft-light opacity-7 pointer-events-none bg-paint-effect"
           style={{
-            backgroundImage: "url('/src/assets/black_white_old_computer.png')",
+            backgroundImage: "url('/black_white_old_computer.png')",
             backgroundSize: "55%",
           }}
         >          

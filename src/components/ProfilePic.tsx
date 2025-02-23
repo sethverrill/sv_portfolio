@@ -13,7 +13,7 @@ const ProfilePic: React.FC<ProfilePicProps> = ({
     <img
       src={profilePic}
       alt={altText}
-      className={`${size} rounded-full border-4 border-deepBlue shadow-lg hover:scale-110 transition-transform duration-300 object-cover object-[0%_30%]`}
+      className={`${size} rounded-full border-4 border-[#001d3d] shadow-lg hover:scale-110 transition-transform duration-300 object-cover object-[0%_30%]`}
     />
   );
 
@@ -24,7 +24,7 @@ const ProfilePic: React.FC<ProfilePicProps> = ({
       ) : (
         <Link to={to}>{imgElement}</Link>
       )}
-      <span className="mt-2 text-lg md:text-xl text-deepBlue font-semibold">
+      <span className="mt-2 text-lg md:text-xl text-[#001d3d] font-semibold">
         About Me
       </span>
     </div>

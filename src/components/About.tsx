@@ -6,7 +6,7 @@ const About = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-blend-overlay opacity-5 bg-paint-effect"
         style={{
-          backgroundImage: "url('/src/assets/black_white_old_computer.png')",
+          backgroundImage: "url('/black_white_old_computer.png')",
           backgroundSize: "55%",
         }}
       ></div>

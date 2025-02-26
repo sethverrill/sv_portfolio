@@ -4,6 +4,7 @@ export interface Project {
   tools: string[];
   liveLink?: string;
   repoLinks?: { label: string; url: string }[];
+  gif?: string;
 }
 
 export interface ProfilePicProps {

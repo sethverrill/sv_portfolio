@@ -21,6 +21,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         <h2 className="text-4xl font-bold text-[#001d3d] mb-4 text-center">
           {project.title}
         </h2>
+        {project.gif && (
+          <img
+          src={project.gif}
+          alt="Project Demo"
+          className="w-full h-auto rounded-lg shadow-md mb-4"
+          />
+        )}
         <p className="text-lg font-semiboldleading-relaxed">{project.description}</p>
         <div className="mt-4">
           <strong className="text-xl">Tools:</strong>

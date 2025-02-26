@@ -3,18 +3,20 @@ import Footer from "../components/Footer";
 import ProjectModal from "./ProjectModal";
 import { Project } from "../types/appInterfaces";
 
+
 const projects: Project[] = [
   {
-    title: "Smart Gardening",
+    title: "🪴 Smart Gardening",
     description:
       "Smart Gardening is an intelligent web application designed to help users discover the best plants for their gardens based on climate, soil type, and personal preferences. By entering their location and selecting plant requirements, users receive tailored recommendations for plants that are best suited for their environment.",
-    tools:
-     [
+    tools: [
       "React",
       "TypeScript",
       "Ruby on Rails",
       "OpenAI API",
       "Google Cloud",
+      "CSS",
+      "SQL/ActiveRecord"
     ],
     liveLink: "https://smart-gardening-fe.vercel.app/",
     repoLinks: [
@@ -27,7 +29,25 @@ const projects: Project[] = [
         url: "https://github.com/sethverrill/smart-gardening-be",
       },
     ],
+    gif: "/src/assets/Smart_gardening_demo.gif",
   },
+
+  {
+    title: "🎬 Rancid Tomatillos",
+    description:
+    "Rancid Tomatillos is a movie information app that allows users to explore current popular movies and view the details about those movies. It also allows users to upvote or downvote movies based on their opinion",
+    tools: [
+      "React",
+      "React Router",
+      "CSS"
+    ],
+    repoLinks: [
+      {label: "Frontend Repo",
+        url: "https://github.com/sethverrill/rancid-tomatillos",
+      },
+    ],
+    gif: "/src/assets/ranciddemo.gif",
+  }
 ];
 
 const Projects = () => {
@@ -46,12 +66,12 @@ const Projects = () => {
         <h1 className="absolute top-3 w-full text-center text-[4rem] md:text-[6rem] italic font-[Tangerine] tracking-wide text-[#DCC6A0]">
           Projects
         </h1>
-        <div className="mt-6 space-y-4 text-3xl">
+        <div className="mt-8 w-full max-w-6xl flex flex-col items-center space-y-18 text-6xl">
           {projects.map((project, index) => (
             <button
               key={index}
               onClick={() => setSelectedProject(project)}
-              className="text-beige hover:text-[#001d3d] transition-all duration-300"
+              className="text-beige hover:text-[#001d3d] transition-all duration-300 text-3xl md:text-4xl font-black transform hover:scale-105 hover:tracking-widest py-6"
             >
               {project.title}
             </button>

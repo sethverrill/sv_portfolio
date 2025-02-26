@@ -18,15 +18,15 @@ const ProjectPic: React.FC<ProjectPictureProps> = ({
   );
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="relative flex items-center group">
       {location.pathname === to ? (
         imgElement
       ) : (
-        <Link to={to}>{imgElement}</Link>
+        <Link to={to} className="flex items-center">
+          {imgElement}
+          <span className="hover-expand-text-projects">Projects</span>
+        </Link>
       )}
-      <span className="mt-2 text-lg md:text-xl text-[#001d3d] font-semibold">
-        Projects
-      </span>
     </div>
   );
 };

@@ -7,6 +7,12 @@ import { useEffect } from "react";
 const App = () => {
   useEffect(() => {
     document.title = "Seth Verrill || Portfolio";
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.href = "/favicon.ico";
+    favicon.type = "image/x-icon";
+
+    document.head.appendChild(favicon);
   }, []);
   return (
     <Router>

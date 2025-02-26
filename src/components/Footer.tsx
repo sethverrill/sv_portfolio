@@ -32,7 +32,7 @@ const Footer: React.FC<FooterProps> = ({ showHomeLink }) => {
       {showHomeLink && (
         <Link
           to="/"
-          className="absolute bottom-6 right-6 px-5 py-2 text-lg border border-beige text-beige rounded-lg hover:bg-beige hover:text-black transition-colors"
+          className="absolute bottom-2 right-10 px-6 py-2 text-lg text-beige font-bold rounded-lg hover:underline"
         >
           Home
         </Link>

@@ -16,11 +16,11 @@ const MainContent = () => {
         </div>
       )}
 
-      <nav className="absolute bottom-15 left-15 md:bottom-10 md:left-12">
-        <ProfilePic to="/about" size="w-36 h-36 md:w-48 md:h-48" />
+      <nav className="absolute left-[20%] top-[25%] flex items-center group">
+        <ProfilePic to="/about" size="w-48 h-48 md:w-56 md:h-56" />
       </nav>
-      <nav className="absolute bottom-20 right-10 md:bottom-10 md:right-12">
-        <ProjectPic to="/projects" size="w-36 h-36 md:w-48 md:h-48" />
+      <nav className="absolute right-[20%] top-[60%] flex items-center group">
+        <ProjectPic to="/projects" size="w-48 h-48 md:w-56 md:h-56" />
       </nav>
       <Routes>
         <Route path="/" element={<div></div>} />

@@ -3,7 +3,7 @@ export interface Project {
   description: string;
   tools: string[];
   liveLink?: string;
-  repoLink?: string;
+  repoLinks?: { label: string; url: string }[];
 }
 
 export interface ProfilePicProps {

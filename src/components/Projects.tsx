@@ -1,25 +1,69 @@
+import { useState } from "react";
 import Footer from "../components/Footer";
+import ProjectModal from "./ProjectModal";
+import { Project } from "../types/appInterfaces";
+
+const projects: Project[] = [
+  {
+    title: "Smart Gardening",
+    description:
+      "Smart Gardening is an intelligent web application designed to help users discover the best plants for their gardens based on climate, soil type, and personal preferences. By entering their location and selecting plant requirements, users receive tailored recommendations for plants that are best suited for their environment.",
+    tools:
+     [
+      "React",
+      "TypeScript",
+      "Ruby on Rails",
+      "OpenAI API",
+      "Google Cloud",
+    ],
+    liveLink: "https://smart-gardening-fe.vercel.app/",
+    repoLinks: [
+      {
+        label: "Frontend Repo",
+        url: "https://github.com/wally-yawn/smart_gardening_fe",
+      },
+      {
+        label: "Backend Repo",
+        url: "https://github.com/sethverrill/smart-gardening-be",
+      },
+    ],
+  },
+];
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <div className="h-screen w-screen flex flex-col justify-between bg-gradient-to-b from-[#4A6D8C] via-[#A28F73] to-[#DCC6A0] text-beige relative">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-blend-soft-light opacity-10"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-blend-overlay opacity-5 bg-paint-effect"
         style={{
-          backgroundImage: "url('/src/assets/black_white_old_computer.png')",
-          backgroundSize: "75%",
+          backgroundImage: "url('/black_white_old_computer.png')",
+          backgroundSize: "55%",
         }}
       ></div>
       <div className="relative z-10 flex flex-col items-center justify-center text-center flex-grow">
-        <h1 className="text-7xl md:text-8xl italic text-beige font-[Tangerine] tracking-widest">
+        <h1 className="absolute top-3 w-full text-center text-[4rem] md:text-[6rem] italic font-[Tangerine] tracking-wide text-[#DCC6A0]">
           Projects
         </h1>
-        <div className="max-w-3xl bg-black bg-opacity-50 p-8 rounded-lg shadow-lg mt-4">
-          <p className="text-lg md:text-xl">
-            A collection of my work, featuring applications built with modern technologies.
-          </p>
+        <div className="mt-6 space-y-4 text-3xl">
+          {projects.map((project, index) => (
+            <button
+              key={index}
+              onClick={() => setSelectedProject(project)}
+              className="text-beige hover:text-[#001d3d] transition-all duration-300"
+            >
+              {project.title}
+            </button>
+          ))}
         </div>
       </div>
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
       <Footer showHomeLink />
     </div>
   );

@@ -29,7 +29,7 @@ const projects: Project[] = [
         url: "https://github.com/sethverrill/smart-gardening-be",
       },
     ],
-    gif: "https://i.imgur.com/ezIpVhr.gif",
+    gif: "/Smart_gardening_demo.gif",
   },
 
   {
@@ -46,7 +46,7 @@ const projects: Project[] = [
         url: "https://github.com/sethverrill/rancid-tomatillos",
       },
     ],
-    gif: "/src/assets/ranciddemo.gif",
+    gif: "/ranciddemo.gif",
   }
 ];
 

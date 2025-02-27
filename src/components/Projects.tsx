@@ -29,7 +29,7 @@ const projects: Project[] = [
         url: "https://github.com/sethverrill/smart-gardening-be",
       },
     ],
-    gif: "https://imgur.com/a/kVP0o1j",
+    gif: "https://i.imgur.com/ezIpVhr.gif",
   },
 
   {
